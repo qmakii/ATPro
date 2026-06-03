@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATPro | Документы</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <h1>AT<span>Pro</span></h1>
+        <p class="logo-sub">УПРАВЛЕНИЕ ПЕРЕВОЗКАМИ</p>
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Виды услуг</a>
+      <a href="documents.html" class="active">Документы</a>
+      <a href="tips.html">Советы</a>
+      <a href="it-systems.html">IT-системы</a>
+      <a href="algorithms.html">Алгоритмы</a>
+      <a href="contact.html">Контакты</a>
+      <button class="btn-nav" onclick="window.location.href='contact.html'">Связаться</button>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>Документооборот в автоперевозках</h1>
+    <p>Без правильно оформленных документов ни одна перевозка не начнётся. Разбираем основные формы.</p>
+
+    <h2>📄 Внутренние перевозки (РФ)</h2>
+    <ul>
+      <li><strong>Транспортная накладная</strong> — подтверждает договор перевозки. Обязательна для всех юрлиц.</li>
+      <li><strong>Путевой лист</strong> — оформляется на каждое ТС, фиксирует пробег и расход топлива.</li>
+      <li><strong>Заказ-наряд</strong> — дополнительный документ для разовых перевозок.</li>
+      <li><strong>Акт сверки</strong> — для взаиморасчётов между перевозчиком и заказчиком.</li>
+    </ul>
+
+    <h2>🌍 Международные перевозки</h2>
+    <ul>
+      <li><strong>CMR-накладная</strong> — международная товарно-транспортная накладная. Заполняется на русском и английском.</li>
+      <li><strong>TIR-карнет</strong> — книжка МДП, ускоряет таможенное оформление в странах-участницах.</li>
+      <li><strong>Инвойс (Invoice)</strong> — коммерческий счёт на оплату груза.</li>
+      <li><strong>Упаковочный лист</strong> — детализация: что в какой коробке, вес, объём.</li>
+      <li><strong>Страховой полис</strong> — «Зелёная карта» для автомобиля, страховка груза.</li>
+    </ul>
+
+    <h2>📊 Сравнительная таблица</h2>
+    <table class="doc-table">
+      <thead>
+        <tr><th>Документ</th><th>Внутренние</th><th>Международные</th><th>Срок хранения</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Транспортная накладная</td><td>✅</td><td>❌</td><td>5 лет</td></tr>
+        <tr><td>CMR</td><td>❌</td><td>✅</td><td>5 лет</td></tr>
+        <tr><td>TIR-карнет</td><td>❌</td><td>✅</td><td>По возврату</td></tr>
+        <tr><td>Путевой лист</td><td>✅</td><td>✅</td><td>1 год</td></tr>
+        <tr><td>Инвойс</td><td>🟡</td><td>✅</td><td>5 лет</td></tr>
+      </tbody>
+    </table>
+
+    <h2>⚠️ Типичные ошибки</h2>
+    <ul>
+      <li>Несовпадение веса брутто в CMR и фактического на границе</li>
+      <li>Отсутствие печати грузополучателя в транспортной накладной</li>
+      <li>Просроченные разрешения на въезд в страны ЕС</li>
+      <li>Неверный код ТН ВЭД в инвойсе → проблемы с таможней</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2026 ATPro — информационный портал по управлению автомобильными перевозками</p>
+  </footer>
+</body>
+</html>

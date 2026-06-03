@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATPro | Алгоритмизация</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .algo-card {
+      background: rgba(10, 10, 15, 0.7);
+      border-radius: 24px;
+      padding: 24px;
+      margin: 24px 0;
+      border: 1px solid rgba(139, 30, 63, 0.3);
+      transition: all 0.3s ease;
+    }
+    .algo-card:hover {
+      border-color: #8b1e3f;
+      transform: translateX(6px);
+    }
+    .step-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .step-list li {
+      background: rgba(139, 30, 63, 0.1);
+      margin: 12px 0;
+      padding: 12px 18px;
+      border-radius: 14px;
+      border-left: 3px solid #8b1e3f;
+    }
+    .flow-demo {
+      background: #0a0a0f;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      font-family: monospace;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <h1>AT<span>Pro</span></h1>
+        <p class="logo-sub">УПРАВЛЕНИЕ ПЕРЕВОЗКАМИ</p>
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Виды услуг</a>
+      <a href="documents.html">Документы</a>
+      <a href="tips.html">Советы</a>
+      <a href="contact.html">Контакты</a>
+      <a href="it-systems.html">IT-системы</a>
+      <a href="algorithms.html" class="active">Алгоритмы</a>
+      <button class="btn-nav" onclick="window.location.href='contact.html'">Связаться</button>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>Алгоритмизация в логистике</h1>
+    <p>Как алгоритмы помогают решать задачи маршрутизации, оптимизации загрузки и управления парком.</p>
+
+    <h2>🧠 Что такое алгоритм?</h2>
+    <p>Алгоритм — это чёткая последовательность действий, ведущая к решению задачи. В логистике алгоритмы используются повсеместно: от расчёта кратчайшего пути до распределения грузов по машинам.</p>
+
+    <div class="algo-card">
+      <h3>📌 Задача коммивояжёра (TSP)</h3>
+      <p>Классическая алгоритмическая проблема: нужно найти самый короткий маршрут, который проходит через все точки и возвращается в начало. Для 3-5 точек можно перебрать, а для 50+ используются эвристики (муравьиный алгоритм, генетические алгоритмы).</p>
+    </div>
+
+    <h2>🚚 Основные алгоритмы в перевозках</h2>
+    <ul>
+      <li><strong>Алгоритм Дейкстры</strong> — поиск кратчайшего пути в графе дорог. Основа любого навигатора.</li>
+      <li><strong>Жадные алгоритмы</strong> — используются для быстрой, но не всегда идеальной маршрутизации (быстро, ресурсосберегающе).</li>
+      <li><strong>Алгоритмы упаковки (Bin packing)</strong> — оптимальное распределение грузов по машинам с учётом объёма и грузоподъёмности.</li>
+      <li><strong>Потоковые алгоритмы</strong> — управление цепочками поставок и распределение товаров по складам.</li>
+    </ul>
+
+    <h2>📊 Блок-схема: простейший алгоритм выбора транспорта</h2>
+    <div class="flow-demo">
+      <pre style="margin:0; text-align: left; display: inline-block;">
+[ Начало ]
+    ↓
+[ Вес груза > 1.5т? ]
+    ↓         ↓
+   Да        Нет
+    ↓         ↓
+[ Газель ] [ Фургон ]
+    ↓         ↓
+[ Конец ] [ Конец ]</pre>
+    </div>
+
+    <h2>✍️ Псевдокод алгоритма распределения заказов</h2>
+    <div class="code-block" style="background:#0a0a0f; border-left-color:#8b1e3f; padding:16px;">
+      <pre style="margin:0; color:#b0b0c0;">
+АЛГОРИТМ распределить_заказы(список_заказов, список_машин):
+    ДЛЯ каждого заказа ИЗ список_заказов:
+        подходящие_машины = []
+        ДЛЯ каждой машины ИЗ список_машин:
+            ЕСЛИ заказ.вес <= машина.грузоподъемность И
+               заказ.объем <= машина.объем_кузова:
+                добавить машину в подходящие_машины
+        ЕСЛИ подходящие_машины НЕ пуст:
+            лучшая_машина = выбрать_с_минимальной_стоимостью(подходящие_машины)
+            назначить_заказ_на_машину(заказ, лучшая_машина)
+        ИНАЧЕ:
+            сообщить("Нет подходящего ТС для заказа " + заказ.id)
+    КОНЕЦ</pre>
+    </div>
+
+    <h2>🎓 Как научиться алгоритмизации?</h2>
+    <ul class="step-list">
+      <li><strong>Шаг 1.</strong> Освойте базовые структуры данных: массивы, списки, словари, графы.</li>
+      <li><strong>Шаг 2.</strong> Изучите алгоритмы сортировки и поиска (бинарный поиск, быстрая сортировка).</li>
+      <li><strong>Шаг 3.</strong> Практикуйтесь на задачах с Codeforces, LeetCode или в курсах на Stepik.</li>
+      <li><strong>Шаг 4.</strong> Реализуйте алгоритм Дейкстры самостоятельно и визуализируйте его на карте.</li>
+      <li><strong>Шаг 5.</strong> Примените жадный алгоритм к задаче составления маршрута развозки товаров.</li>
+    </ul>
+
+    <h2>🏆 Пример на Python: жадный алгоритм для загрузки фургона</h2>
+    <div class="code-block">
+      <pre style="margin:0;">
+def greedy_loading(items, capacity):
+    # items: список (вес, ценность)
+    items_sorted = sorted(items, key=lambda x: x[1]/x[0], reverse=True)
+    total_weight = 0
+    selected = []
+    for weight, value in items_sorted:
+        if total_weight + weight <= capacity:
+            selected.append((weight, value))
+            total_weight += weight
+    return selected, total_weight
+
+# Пример: (вес, ценность)
+cargo = [(10, 60), (20, 100), (30, 120)]
+capacity = 50
+best, weight = greedy_loading(cargo, capacity)
+print(f"Выбрано: {best}, общий вес: {weight}")</pre>
+    </div>
+
+    <div class="why-us" style="margin-top: 40px; background: transparent;">
+      <h2 style="color:#fff;">Алгоритмическое мышление → успех в логистике</h2>
+      <div class="why-grid">
+        <div>⚡ Экономия топлива до 25%</div>
+        <div>📦 Оптимальная загрузка складов</div>
+        <div>⏱️ Сокращение времени простоя</div>
+        <div>📈 Рост эффективности парка</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 ATPro — информационный портал по управлению автомобильными перевозками</p>
+  </footer>
+</body>
+</html>

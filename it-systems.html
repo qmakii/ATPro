@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATPro | Информационные системы и программирование</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .code-block {
+      background: #0a0a0f;
+      border-left: 4px solid #8b1e3f;
+      padding: 16px 20px;
+      border-radius: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      overflow-x: auto;
+      margin: 20px 0;
+      color: #d4d4dc;
+    }
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .tech-card {
+      background: rgba(10, 10, 15, 0.7);
+      border-radius: 20px;
+      padding: 22px;
+      flex: 1;
+      min-width: 240px;
+      border: 1px solid rgba(139, 30, 63, 0.3);
+      transition: all 0.3s ease;
+    }
+    .tech-card:hover {
+      border-color: #8b1e3f;
+      transform: translateY(-5px);
+    }
+    .tech-card h3 {
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .tech-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <h1>AT<span>Pro</span></h1>
+        <p class="logo-sub">УПРАВЛЕНИЕ ПЕРЕВОЗКАМИ</p>
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Виды услуг</a>
+      <a href="documents.html">Документы</a>
+      <a href="tips.html">Советы</a>
+      <a href="contact.html">Контакты</a>
+      <a href="it-systems.html" class="active">IT-системы</a>
+      <a href="algorithms.html">Алгоритмы</a>
+      <button class="btn-nav" onclick="window.location.href='contact.html'">Связаться</button>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>Информационные системы и программирование</h1>
+    <p>Как современные IT-решения и навыки программирования трансформируют транспортную логистику.</p>
+
+    <h2>📡 TMS — Транспортные управляющие системы</h2>
+    <p>TMS (Transportation Management System) — это сердце современной логистики. Такие системы позволяют автоматизировать планирование маршрутов, отслеживать грузы в реальном времени и оптимизировать затраты.</p>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-icon">🗺️</div>
+        <h3>Маршрутизация</h3>
+        <p>Автоматическое построение оптимальных маршрутов с учётом пробок, веса и габаритов.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">📍</div>
+        <h3>GPS-мониторинг</h3>
+        <p>Отслеживание транспорта в реальном времени, контроль скорости и расхода топлива.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">📊</div>
+        <h3>Аналитика и отчёты</h3>
+        <p>Дашборды с KPI, анализ эффективности рейсов и водителей.</p>
+      </div>
+    </div>
+
+    <h2>💻 Ключевые технологии и языки программирования</h2>
+    <ul>
+      <li><strong>Python</strong> — анализ данных, автоматизация отчётов, машинное обучение для прогнозирования сроков доставки.</li>
+      <li><strong>SQL</strong> — работа с базами данных заказов, клиентов и маршрутов.</li>
+      <li><strong>JavaScript / TypeScript</strong> — создание веб-интерфейсов для диспетчерских и трекинговых систем.</li>
+      <li><strong>Java / C#</strong> — backend крупных TMS-платформ и ERP-интеграция.</li>
+      <li><strong>1С:Логистика</strong> — популярное решение для учёта перевозок на территории СНГ.</li>
+    </ul>
+
+    <h2>🔧 Инструменты логиста-программиста</h2>
+    <div class="badge-list" style="display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
+      <span class="badge">PostgreSQL / MySQL</span>
+      <span class="badge">Tableau / Power BI</span>
+      <span class="badge">Git / GitHub</span>
+      <span class="badge">REST API</span>
+      <span class="badge">Docker</span>
+      <span class="badge">Yandex Maps API</span>
+    </div>
+
+    <h2>📝 Пример: простая программа расчёта стоимости перевозки</h2>
+    <div class="code-block">
+      <pre style="margin:0; color:#c0c0d0;">
+def calculate_price(distance_km, weight_kg, is_express=False):
+    base_rate = 35  # руб за км
+    weight_coef = weight_kg / 100
+    price = distance_km * base_rate * (1 + weight_coef)
+    if is_express:
+        price *= 1.5
+    return round(price, 2)
+
+# Пример использования
+dist = 1250
+weight = 850
+print(f"Стоимость перевозки: {calculate_price(dist, weight)} руб")
+print(f"Экспресс: {calculate_price(dist, weight, True)} руб")</pre>
+    </div>
+
+    <h2>🚀 Как начать изучать программирование для логистики?</h2>
+    <ul>
+      <li>Изучите основы Python на курсах («Поколение Python», Stepik).</li>
+      <li>Освойте SQL — без работы с базами данных в логистике никуда.</li>
+      <li>Попробуйте написать небольшой скрипт для расчёта маршрутов с помощью открытых API.</li>
+      <li>Изучите Excel на продвинутом уровне (Power Query, макросы VBA).</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2026 ATPro — информационный портал по управлению автомобильными перевозками</p>
+  </footer>
+</body>
+</html>
