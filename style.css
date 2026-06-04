@@ -646,6 +646,21 @@ footer {
 .topic-card {
   background: #ffffff;
 }
+.topic-card h1,
+.topic-card h2,
+.topic-card h3,
+.topic-card h4,
+.topic-card p,
+.topic-card li,
+.topic-card td,
+.topic-card strong {
+    color: #000000;
+}
+
+.code-block,
+.code-block pre {
+    color: #f8f8f2;
+}
 
 /* Ссылки оставляем красными */
 .topic-card a {
