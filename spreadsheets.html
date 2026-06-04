@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронные таблицы | ATPro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .topic-card { background: var(--bg-secondary, #f5f5f5); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .code-block { background: #2d2d2d; color: #f8f8f2; padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; }
+        .formula-box { background: #e8f4f8; padding: 1rem; border-left: 4px solid #2980b9; font-family: monospace; margin: 1rem 0; }
+        .sheet-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .sheet-table th, .sheet-table td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        .sheet-table th { background: var(--primary, #2c3e50); color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ATPro</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="algorithms.html">Алгоритмы</a></li>
+                <li><a href="it-systems.html">Системы счисления</a></li>
+                <li><a href="encoding.html">Кодирование</a></li>
+                <li><a href="graphs.html">Графы</a></li>
+                <li><a href="databases.html">Базы данных</a></li>
+                <li><a href="spreadsheets.html" class="active">Эл. таблицы</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="topic-content">
+            <h1>Электронные таблицы (Excel / Google Sheets)</h1>
+            
+            <div class="topic-card">
+                <h2>📈 Основы работы</h2>
+                <p>Электронная таблица состоит из <strong>ячеек</strong>, расположенных на пересечении строк и столбцов. Адрес ячейки: буква столбца + номер строки (например, <strong>B4</strong>).</p>
+                <table class="sheet-table">
+                    <thead><tr><th></th><th>A</th><th>B</th><th>C</th></tr></thead>
+                    <tbody>
+                        <tr><th>1</th><td>Товар</td><td>Цена</td><td>Количество</td></tr>
+                        <tr><th>2</th><td>Ноутбук</td><td>50000</td><td>5</td></tr>
+                        <tr><th>3</th><td>Мышь</td><td>1500</td><td>20</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="topic-card">
+                <h2>🧮 Формулы и функции</h2>
+                <p>Формула всегда начинается со знака <strong>=</strong>. Основные функции:</p>
+                <ul>
+                    <li><strong>=СУММ(A1:A10)</strong> — сумма чисел в диапазоне</li>
+                    <li><strong>=СРЗНАЧ(B1:B5)</strong> — среднее арифметическое</li>
+                    <li><strong>=ЕСЛИ(A1>10; "Да"; "Нет")</strong> — условный оператор</li>
+                    <li><strong>=ВПР(E1; A1:B10; 2; ЛОЖЬ)</strong> — вертикальный просмотр</li>
+                </ul>
+                <div class="formula-box">
+                    <strong>Пример:</strong> =B2*C2 → вычисляет стоимость (цена × количество)
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <h2>📊 Абсолютные и относительные ссылки</h2>
+                <p><strong>Относительная (A1):</strong> изменяется при копировании формулы.</p>
+                <p><strong>Абсолютная ($A$1):</strong> фиксирует столбец и строку (не меняется).</p>
+                <p><strong>Смешанная ($A1 или A$1):</strong> фиксирует только столбец или только строку.</p>
+                <div class="code-block">
+                    <pre>// Пример использования абсолютной ссылки для налоговой ставки
+= B2 * $E$1  // где в E1 хранится ставка НДС (например, 0.20)</pre>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <h2>📉 Диаграммы и сводные таблицы</h2>
+                <p><strong>Сводная таблица</strong> — мощный инструмент для агрегации и анализа больших объёмов данных (группировка, сумма, среднее).</p>
+                <p><strong>Диаграммы:</strong> гистограммы, круговые, линейчатые — для визуализации трендов и сравнений.</p>
+                <div class="formula-box">
+                    Совет: Используйте <strong>Условное форматирование</strong> для автоматической подсветки ячеек по правилам (например, все продажи >1000 зелёным цветом).
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2026 ATPro. Учебный портал по информатике.</p></footer>
+</body>
+</html>
