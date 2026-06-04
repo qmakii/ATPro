@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Базы данных | ATPro</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         .topic-card { background: var(--bg-secondary, #f5f5f5); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
@@ -15,24 +16,28 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <h1>AT<span>Pro</span></h1>
+                <p class="logo-sub">УПРАВЛЕНИЕ ПЕРЕВОЗКАМИ</p>
+            </a>
+        </div>
         <nav class="nav">
-         
             <ul class="nav-links">
                 <li><a href="index.html">Главная</a></li>
-               <a href="services.html">Виды услуг</a>
-      <a href="documents.html">Документы</a>
-      <a href="tips.html">Советы</a>
-                <li><a href="algorithms.html>Алгоритмы</a></li>
+                <li><a href="services.html">Виды услуг</a></li>
+                <li><a href="documents.html">Документы</a></li>
+                <li><a href="tips.html">Советы</a></li>
+                <li><a href="algorithms.html">Алгоритмы</a></li>
                 <li><a href="it-systems.html">Системы счисления</a></li>
                 <li><a href="encoding.html">Кодирование</a></li>
                 <li><a href="graphs.html">Графы</a></li>
                 <li><a href="databases.html" class="active">Базы данных</a></li>
                 <li><a href="spreadsheets.html">Эл. таблицы</a></li>
-      <a href="it-systems.html">IT-системы</a>
                 <li><a href="contact.html">Контакты</a></li>
-                  <button class="btn-nav" onclick="window.location.href='contact.html'">Связаться</button>
-    </nav>
+            </ul>
+            <button class="btn-nav" onclick="window.location.href='contact.html'">Связаться</button>
         </nav>
     </header>
 
