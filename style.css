@@ -638,26 +638,25 @@ footer {
 }
 
 /* Карточки на тематических страницах */
+.topic-card,
+.topic-card * {
+  color: #000000 !important;
+}
+
 .topic-card {
-  color: #000000;
   background: #ffffff;
 }
 
-.topic-card h2 {
-  color: #1a1a2e;
+/* Ссылки оставляем красными */
+.topic-card a {
+  color: #8b1e3f !important;
 }
 
-.topic-card p,
-.topic-card li {
-  color: #000000;
-}
-
-.graph-visual {
-  color: #000000;
-}
-
-.formula-box {
-  color: #000000;
+/* Блоки кода внутри карточек не трогаем */
+.topic-card .code-block,
+.topic-card .code-block pre,
+.topic-card .code-block * {
+  color: #f8f8f2 !important;
 }
 
 /* ========== АДАПТИВ ДЛЯ НАВИГАЦИИ ========== */
