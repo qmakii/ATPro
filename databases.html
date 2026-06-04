@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Базы данных | ATPro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .topic-card { background: var(--bg-secondary, #f5f5f5); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .code-block { background: #2d2d2d; color: #f8f8f2; padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .data-table th { background: var(--primary, #2c3e50); color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ATPro</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="algorithms.html">Алгоритмы</a></li>
+                <li><a href="it-systems.html">Системы счисления</a></li>
+                <li><a href="encoding.html">Кодирование</a></li>
+                <li><a href="graphs.html">Графы</a></li>
+                <li><a href="databases.html" class="active">Базы данных</a></li>
+                <li><a href="spreadsheets.html">Эл. таблицы</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="topic-content">
+            <h1>Базы данных (SQL и NoSQL)</h1>
+            
+            <div class="topic-card">
+                <h2>📊 Что такое база данных?</h2>
+                <p>База данных (БД) — организованная структура для хранения, управления и извлечения данных. <strong>СУБД</strong> — система управления базами данных (MySQL, PostgreSQL, SQLite, MongoDB).</p>
+            </div>
+
+            <div class="topic-card">
+                <h2>🗄️ Реляционные БД (SQL)</h2>
+                <p>Данные хранятся в таблицах, связанных ключами. <strong>Первичный ключ</strong> — уникальный идентификатор записи. <strong>Внешний ключ</strong> — ссылается на первичный ключ другой таблицы.</p>
+                <table class="data-table">
+                    <caption>Таблица "Студенты"</caption>
+                    <thead><tr><th>id (PK)</th><th>имя</th><th>курс</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td>Анна</td><td>3</td></tr>
+                        <tr><td>2</td><td>Борис</td><td>2</td></tr>
+                    </tbody>
+                </table>
+                <div class="code-block">
+                    <pre>-- Создание таблицы
+CREATE TABLE students (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    course INTEGER
+);
+
+-- Вставка данных
+INSERT INTO students VALUES (1, 'Анна', 3);
+
+-- Запрос с JOIN
+SELECT s.name, g.grade
+FROM students s
+JOIN grades g ON s.id = g.student_id
+WHERE g.subject = 'Математика';</pre>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <h2>📁 Нереляционные БД (NoSQL)</h2>
+                <p>Для больших объёмов неструктурированных данных: MongoDB (документы), Redis (ключ-значение), Neo4j (графы).</p>
+                <div class="code-block">
+                    <pre>// Документ MongoDB
+{
+  "_id": ObjectId("507f1f77bcf86cd799439011"),
+  "username": "ivan_petrov",
+  "email": "ivan@example.com",
+  "courses": ["Алгоритмы", "Базы данных"],
+  "profile": {
+    "age": 20,
+    "city": "Москва"
+  }
+}</pre>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <h2>🔗 Нормализация</h2>
+                <p>Устранение избыточности и аномалий:</p>
+                <ul>
+                    <li><strong>1НФ:</strong> атомарные значения, нет повторяющихся групп</li>
+                    <li><strong>2НФ:</strong> полная зависимость от первичного ключа</li>
+                    <li><strong>3НФ:</strong> отсутствие транзитивных зависимостей</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2026 ATPro. Учебный портал по информатике.</p></footer>
+</body>
+</html>
