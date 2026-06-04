@@ -62,7 +62,15 @@ main {
   flex-wrap: wrap;
 }
 
-.nav a {
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #c5c5d0;
   font-size: 14px;
@@ -71,11 +79,11 @@ main {
   letter-spacing: 0.3px;
 }
 
-.nav a:hover {
+.nav-links a:hover {
   color: #8b1e3f;
 }
 
-.nav a.active {
+.nav-links a.active {
   color: #8b1e3f;
   font-weight: 600;
 }
@@ -512,6 +520,11 @@ footer {
     gap: 18px;
   }
   
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+  
   .btn-nav {
     margin-left: 0;
   }
@@ -581,6 +594,73 @@ footer {
   word-wrap: break-word;
 }
 
+/* ========== ЧЁРНЫЙ ТЕКСТ ДЛЯ ТЕМАТИЧЕСКИХ СТРАНИЦ ========== */
+.topic-content {
+  color: #000000;
+}
+
+.topic-content h1 {
+  color: #000000;
+  border-left: 4px solid #8b1e3f;
+}
+
+.topic-content h2 {
+  color: #1a1a2e;
+}
+
+.topic-content h3 {
+  color: #000000;
+}
+
+.topic-content p {
+  color: #000000;
+}
+
+.topic-content li {
+  color: #000000;
+}
+
+.topic-content td {
+  color: #000000;
+}
+
+/* Заголовки таблиц остаются с белым текстом */
+.sheet-table th,
+.encoding-table th,
+.data-table th {
+  color: white;
+}
+
+/* Блоки кода остаются со светлым текстом */
+.code-block,
+.code-block pre {
+  color: #f8f8f2;
+}
+
+/* Карточки на тематических страницах */
+.topic-card {
+  color: #000000;
+  background: #ffffff;
+}
+
+.topic-card h2 {
+  color: #1a1a2e;
+}
+
+.topic-card p,
+.topic-card li {
+  color: #000000;
+}
+
+.graph-visual {
+  color: #000000;
+}
+
+.formula-box {
+  color: #000000;
+}
+
+/* ========== АДАПТИВ ДЛЯ НАВИГАЦИИ ========== */
 @media (max-width: 768px) {
   .nav a[href="it-systems.html"],
   .nav a[href="algorithms.html"] {
