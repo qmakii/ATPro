@@ -9,7 +9,7 @@
     <style>
         .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         
-        /* Текст ВНЕ карточек — красный (бордовый из гаммы) */
+        /* Текст ВНЕ карточек — белый */
         .topic-content > h1,
         .topic-content > p,
         .topic-content > h2,
@@ -17,7 +17,7 @@
         .topic-content > h4,
         .topic-content > span,
         .topic-content > div:not(.topic-card):not(.code-block):not(.formula-box) {
-            color: #8b1e3f;
+            color: #ffffff;
         }
         
         /* Карточки — белый фон, чёрный текст */
@@ -44,12 +44,10 @@
             color: #000000;
         }
         
-        /* Ссылки в карточках — красный */
         .topic-card a {
             color: #8b1e3f;
         }
         
-        /* Блоки кода */
         .code-block { 
             background: #2d2d2d; 
             color: #f8f8f2; 
@@ -64,7 +62,6 @@
             color: #f8f8f2;
         }
         
-        /* Блоки с формулами */
         .formula-box { 
             background: #e8f4f8; 
             padding: 1rem; 
@@ -77,7 +74,6 @@
             color: #000000;
         }
         
-        /* Таблицы */
         .encoding-table, .sheet-table, .data-table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -97,7 +93,6 @@
         }
         .sheet-table th, .sheet-table td { text-align: center; }
         
-        /* Доп. элементы */
         .graph-visual { color: #000000; }
     </style>
 </head>
@@ -171,15 +166,4 @@
 
             <div class="topic-card">
                 <h2>📉 Диаграммы и сводные таблицы</h2>
-                <p><strong>Сводная таблица</strong> — мощный инструмент для агрегации и анализа больших объёмов данных (группировка, сумма, среднее).</p>
-                <p><strong>Диаграммы:</strong> гистограммы, круговые, линейчатые — для визуализации трендов и сравнений.</p>
-                <div class="formula-box">
-                    Совет: Используйте <strong>Условное форматирование</strong> для автоматической подсветки ячеек по правилам (например, все продажи >1000 зелёным цветом).
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer><p>&copy; 2026 ATPro. Учебный портал по информатике.</p></footer>
-</body>
-</html>
+                <p><strong>Сводная таблица</strong> — мощный инструмент для агрегации и анализа больших объёмов данных (группировка
