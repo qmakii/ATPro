@@ -33,20 +33,20 @@
         </nav>
     </header>
 
-    <main style="padding-top: 3rem;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-            <h1 style="color: #ffffff;">Теория графов</h1>
+    <main>
+        <div class="topic-content">
+            <h1>Теория графов</h1>
             
-            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <h2 style="color: #000000; margin-top: 0;">📊 Основные понятия</h2>
-                <p style="color: #000000;"><strong style="color: #000000;">Граф</strong> — это множество вершин (узлов) и соединяющих их рёбер.</p>
-                <ul style="color: #000000; padding-left: 1.5rem;">
-                    <li style="color: #000000; margin-bottom: 0.5rem;"><strong style="color: #000000;">Ориентированный граф (орграф):</strong> рёбра имеют направление (дуги)</li>
-                    <li style="color: #000000; margin-bottom: 0.5rem;"><strong style="color: #000000;">Неориентированный граф:</strong> рёбра не имеют направления</li>
-                    <li style="color: #000000; margin-bottom: 0.5rem;"><strong style="color: #000000;">Взвешенный граф:</strong> каждому ребру присвоен вес (стоимость, расстояние)</li>
-                    <li style="color: #000000; margin-bottom: 0.5rem;"><strong style="color: #000000;">Степень вершины:</strong> количество инцидентных ей рёбер</li>
+            <div class="topic-card">
+                <h2>📊 Основные понятия</h2>
+                <p><strong>Граф</strong> — это множество вершин (узлов) и соединяющих их рёбер.</p>
+                <ul>
+                    <li><strong>Ориентированный граф (орграф):</strong> рёбра имеют направление (дуги)</li>
+                    <li><strong>Неориентированный граф:</strong> рёбра не имеют направления</li>
+                    <li><strong>Взвешенный граф:</strong> каждому ребру присвоен вес (стоимость, расстояние)</li>
+                    <li><strong>Степень вершины:</strong> количество инцидентных ей рёбер</li>
                 </ul>
-                <div style="color: #000000; margin-top: 1rem;">
+                <div class="graph-visual">
                     A — B — C<br>
                     |         |<br>
                     D — — — — E<br>
@@ -54,10 +54,10 @@
                 </div>
             </div>
 
-            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <h2 style="color: #000000; margin-top: 0;">🗺️ Представление графов в программировании</h2>
-                <div style="background: #2d2d2d; padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace;">
-                    <pre style="color: #f8f8f2; margin: 0;"># 1. Матрица смежности (для плотных графов)
+            <div class="topic-card">
+                <h2>🗺️ Представление графов в программировании</h2>
+                <div class="code-block">
+                    <pre># 1. Матрица смежности (для плотных графов)
 graph_matrix = [
     [0, 1, 0, 1],  # вершина 0 связана с 1 и 3
     [1, 0, 1, 0],  # вершина 1 связана с 0 и 2
@@ -75,12 +75,12 @@ graph_list = {
                 </div>
             </div>
 
-            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <h2 style="color: #000000; margin-top: 0;">🚀 Обход графов</h2>
-                <p style="color: #000000;"><strong style="color: #000000;">BFS (поиск в ширину):</strong> находит кратчайший путь в невзвешенном графе</p>
-                <p style="color: #000000;"><strong style="color: #000000;">DFS (поиск в глубину):</strong> используется для проверки связности, поиска циклов</p>
-                <div style="background: #2d2d2d; padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
-                    <pre style="color: #f8f8f2; margin: 0;">from collections import deque
+            <div class="topic-card">
+                <h2>🚀 Обход графов</h2>
+                <p><strong>BFS (поиск в ширину):</strong> находит кратчайший путь в невзвешенном графе</p>
+                <p><strong>DFS (поиск в глубину):</strong> используется для проверки связности, поиска циклов</p>
+                <div class="code-block">
+                    <pre>from collections import deque
 
 def bfs(graph, start):
     visited = set()
@@ -99,10 +99,10 @@ print(bfs(graph, 'A'))  # {'A', 'B', 'C', 'D'}</pre>
                 </div>
             </div>
 
-            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <h2 style="color: #000000; margin-top: 0;">⚡ Кратчайшие пути: алгоритм Дейкстры</h2>
-                <div style="background: #2d2d2d; padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace;">
-                    <pre style="color: #f8f8f2; margin: 0;">import heapq
+            <div class="topic-card">
+                <h2>⚡ Кратчайшие пути: алгоритм Дейкстры</h2>
+                <div class="code-block">
+                    <pre>import heapq
 
 def dijkstra(graph, start):
     distances = {node: float('inf') for node in graph}
