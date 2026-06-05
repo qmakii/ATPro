@@ -7,45 +7,87 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-    .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-    .topic-card { background: #ffffff; color: #000000; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .topic-card h1,
-    .topic-card h2,
-    .topic-card h3,
-    .topic-card h4,
-    .topic-card p,
-    .topic-card li,
-    .topic-card td,
-    .topic-card strong,
-    .topic-card span,
-    .topic-card div,
-    .topic-card ul {
-        color: #000000;
-    }
-    .topic-card a {
-        color: #8b1e3f;
-    }
-    .code-block { background: #2d2d2d; color: #f8f8f2; padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; }
-    .code-block,
-    .code-block pre,
-    .code-block * {
-        color: #f8f8f2;
-    }
-    .encoding-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    .encoding-table th, .encoding-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    .encoding-table th { background: var(--primary, #2c3e50); color: white; }
-    .encoding-table td { color: #000000; }
-    .sheet-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    .sheet-table th, .sheet-table td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-    .sheet-table th { background: var(--primary, #2c3e50); color: white; }
-    .sheet-table td { color: #000000; }
-    .data-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    .data-table th, .data-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    .data-table th { background: var(--primary, #2c3e50); color: white; }
-    .data-table td { color: #000000; }
-    .graph-visual { color: #000000; }
-    .formula-box { color: #000000; }
-</style>
+        .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        
+        /* Текст ВНЕ карточек — красный (бордовый из гаммы) */
+        .topic-content > h1,
+        .topic-content > p,
+        .topic-content > h2,
+        .topic-content > h3,
+        .topic-content > h4,
+        .topic-content > span,
+        .topic-content > div:not(.topic-card):not(.code-block) {
+            color: #8b1e3f;
+        }
+        
+        /* Карточки — белый фон, чёрный текст */
+        .topic-card { 
+            background: #ffffff; 
+            color: #000000; 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+        }
+        .topic-card h1,
+        .topic-card h2,
+        .topic-card h3,
+        .topic-card h4,
+        .topic-card p,
+        .topic-card li,
+        .topic-card td,
+        .topic-card th,
+        .topic-card strong,
+        .topic-card span,
+        .topic-card div,
+        .topic-card ul {
+            color: #000000;
+        }
+        
+        /* Ссылки в карточках — красный */
+        .topic-card a {
+            color: #8b1e3f;
+        }
+        
+        /* Блоки кода */
+        .code-block { 
+            background: #2d2d2d; 
+            color: #f8f8f2; 
+            padding: 1rem; 
+            border-radius: 8px; 
+            overflow-x: auto; 
+            font-family: 'Courier New', monospace; 
+        }
+        .code-block,
+        .code-block pre,
+        .code-block * {
+            color: #f8f8f2;
+        }
+        
+        /* Таблицы */
+        .encoding-table, .sheet-table, .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 1rem 0; 
+        }
+        .encoding-table th, .sheet-table th, .data-table th { 
+            border: 1px solid #ddd; 
+            padding: 8px; 
+            text-align: left; 
+            background: var(--primary, #2c3e50); 
+            color: white; 
+        }
+        .encoding-table td, .sheet-table td, .data-table td { 
+            border: 1px solid #ddd; 
+            padding: 8px; 
+            color: #000000; 
+        }
+        .sheet-table th, .sheet-table td { text-align: center; }
+        
+        /* Доп. элементы */
+        .graph-visual { color: #000000; }
+        .formula-box { color: #000000; }
+    </style>
 </head>
 <body>
     <header class="header">
