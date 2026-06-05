@@ -33,24 +33,81 @@
         </nav>
     </header>
 
-    <main style="padding-top: 3rem;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-            <h1 style="color: #ffffff;">Электронные таблицы (Excel / Google Sheets)</h1>
+    <main>
+        <div class="topic-content">
+            <h1>Электронные таблицы (Excel / Google Sheets)</h1>
             
-            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <h2 style="color: #000000; margin-top: 0;">📈 Основы работы</h2>
-                <p style="color: #000000;">Электронная таблица состоит из <strong style="color: #000000;">ячеек</strong>, расположенных на пересечении строк и столбцов. Адрес ячейки: буква столбца + номер строки (например, <strong style="color: #000000;">B4</strong>).</p>
-                <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+            <div class="topic-card">
+                <h2>📈 Основы работы</h2>
+                <p>Электронная таблица состоит из <strong>ячеек</strong>, расположенных на пересечении строк и столбцов. Адрес ячейки: буква столбца + номер строки (например, <strong>B4</strong>).</p>
+                <table class="sheet-table">
                     <thead>
                         <tr>
-                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; background: #2c3e50; color: #ffffff;"></th>
-                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; background: #2c3e50; color: #ffffff;">A</th>
-                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; background: #2c3e50; color: #ffffff;">B</th>
-                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; background: #2c3e50; color: #ffffff;">C</th>
+                            <th></th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; color: #000000;">1</th>
-                            <td style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; color: #000000;">Товар</td>
-                            <td style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; color: #000000;">Цена</
+                            <th>1</th>
+                            <td>Товар</td>
+                            <td>Цена</td>
+                            <td>Количество</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Ноутбук</td>
+                            <td>50000</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Мышь</td>
+                            <td>1500</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="topic-card">
+                <h2>🧮 Формулы и функции</h2>
+                <p>Формула всегда начинается со знака <strong>=</strong>. Основные функции:</p>
+                <ul>
+                    <li><strong>=СУММ(A1:A10)</strong> — сумма чисел в диапазоне</li>
+                    <li><strong>=СРЗНАЧ(B1:B5)</strong> — среднее арифметическое</li>
+                    <li><strong>=ЕСЛИ(A1>10; "Да"; "Нет")</strong> — условный оператор</li>
+                    <li><strong>=ВПР(E1; A1:B10; 2; ЛОЖЬ)</strong> — вертикальный просмотр</li>
+                </ul>
+                <div class="formula-box">
+                    <strong>Пример:</strong> =B2*C2 → вычисляет стоимость (цена × количество)
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <h2>📊 Абсолютные и относительные ссылки</h2>
+                <p><strong>Относительная (A1):</strong> изменяется при копировании формулы.</p>
+                <p><strong>Абсолютная ($A$1):</strong> фиксирует столбец и строку (не меняется).</p>
+                <p><strong>Смешанная ($A1 или A$1):</strong> фиксирует только столбец или только строку.</p>
+                <div class="code-block">
+                    <pre>// Пример использования абсолютной ссылки для налоговой ставки
+= B2 * $E$1  // где в E1 хранится ставка НДС (например, 0.20)</pre>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <h2>📉 Диаграммы и сводные таблицы</h2>
+                <p><strong>Сводная таблица</strong> — мощный инструмент для агрегации и анализа больших объёмов данных (группировка, сумма, среднее).</p>
+                <p><strong>Диаграммы:</strong> гистограммы, круговые, линейчатые — для визуализации трендов и сравнений.</p>
+                <div class="formula-box">
+                    Совет: Используйте <strong>Условное форматирование</strong> для автоматической подсветки ячеек по правилам (например, все продажи >1000 зелёным цветом).
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2026 ATPro. Учебный портал по информатике.</p></footer>
+</body>
+</html>
