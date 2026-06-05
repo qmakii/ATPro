@@ -6,64 +6,6 @@
     <title>Кодирование информации | ATPro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        
-        /* Текст ВНЕ карточек — белый */
-        .topic-content > h1 {
-            color: #ffffff !important;
-        }
-        
-        /* Карточки — белый фон, ВСЁ чёрное */
-        .topic-card { 
-            background: #ffffff !important; 
-            border-radius: 12px; 
-            padding: 1.5rem; 
-            margin-bottom: 1.5rem; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-        }
-        .topic-card * {
-            color: #000000 !important;
-        }
-        .topic-card a {
-            color: #8b1e3f !important;
-        }
-        
-        /* Блоки кода — тёмные */
-        .code-block { 
-            background: #2d2d2d !important; 
-            padding: 1rem; 
-            border-radius: 8px; 
-            overflow-x: auto; 
-            font-family: 'Courier New', monospace; 
-        }
-        .code-block * {
-            color: #f8f8f2 !important;
-        }
-        
-        /* Таблицы — чёрный текст */
-        .encoding-table, .sheet-table, .data-table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin: 1rem 0; 
-        }
-        .encoding-table th, .sheet-table th, .data-table th { 
-            border: 1px solid #ddd; 
-            padding: 8px; 
-            text-align: left; 
-            background: #2c3e50; 
-            color: white !important; 
-        }
-        .encoding-table td, .sheet-table td, .data-table td { 
-            border: 1px solid #ddd; 
-            padding: 8px; 
-            color: #000000 !important; 
-        }
-        .sheet-table th, .sheet-table td { text-align: center; }
-        
-        .graph-visual, .formula-box { color: #000000 !important; }
-        caption { color: #000000 !important; }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -91,30 +33,52 @@
         </nav>
     </header>
 
-    <main>
-        <div class="topic-content">
-            <h1>Кодирование информации</h1>
+    <main style="padding-top: 3rem;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+            <h1 style="color: #ffffff;">Кодирование информации</h1>
             
-            <div class="topic-card">
-                <h2>📝 Текстовое кодирование</h2>
-                <p><strong>ASCII</strong> — 7-битная кодировка (0-127), содержит латиницу, цифры, знаки препинания.</p>
-                <p><strong>Unicode (UTF-8, UTF-16)</strong> — поддерживает символы всех языков мира, эмодзи.</p>
-                <table class="encoding-table">
-                    <thead><tr><th>Символ</th><th>ASCII (дес.)</th><th>ASCII (двоич.)</th><th>UTF-8 (hex)</th></tr></thead>
+            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #000000; margin-top: 0;">📝 Текстовое кодирование</h2>
+                <p style="color: #000000;"><strong style="color: #000000;">ASCII</strong> — 7-битная кодировка (0-127), содержит латиницу, цифры, знаки препинания.</p>
+                <p style="color: #000000;"><strong style="color: #000000;">Unicode (UTF-8, UTF-16)</strong> — поддерживает символы всех языков мира, эмодзи.</p>
+                <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: left; background: #2c3e50; color: #ffffff;">Символ</th>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: left; background: #2c3e50; color: #ffffff;">ASCII (дес.)</th>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: left; background: #2c3e50; color: #ffffff;">ASCII (двоич.)</th>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: left; background: #2c3e50; color: #ffffff;">UTF-8 (hex)</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>A</td><td>65</td><td>01000001</td><td>41</td></tr>
-                        <tr><td>Я</td><td>-</td><td>-</td><td>D0 AF</td></tr>
-                        <tr><td>$</td><td>36</td><td>00100100</td><td>24</td></tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">A</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">65</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">01000001</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">41</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">Я</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">-</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">-</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">D0 AF</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">$</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">36</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">00100100</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">24</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div class="topic-card">
-                <h2>🖼️ Кодирование изображений</h2>
-                <p><strong>Растровая графика:</strong> изображение состоит из пикселей. Каждый пиксель кодируется цветом (RGB, CMYK).</p>
-                <p>Формула объёма: <strong>V = ширина × высота × глубина цвета</strong> (бит на пиксель)</p>
-                <div class="code-block">
-                    <pre>// Пример расчёта размера изображения
+            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #000000; margin-top: 0;">🖼️ Кодирование изображений</h2>
+                <p style="color: #000000;"><strong style="color: #000000;">Растровая графика:</strong> изображение состоит из пикселей. Каждый пиксель кодируется цветом (RGB, CMYK).</p>
+                <p style="color: #000000;">Формула объёма: <strong style="color: #000000;">V = ширина × высота × глубина цвета</strong> (бит на пиксель)</p>
+                <div style="background: #2d2d2d; padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
+                    <pre style="color: #f8f8f2; margin: 0;">// Пример расчёта размера изображения
 ширина = 1920
 высота = 1080
 глубина_цвета = 24  # бит (True Color)
@@ -124,12 +88,12 @@ print(f"Размер: {объём_Мбайт:.2f} МБ")  # ~5.93 МБ</pre>
                 </div>
             </div>
 
-            <div class="topic-card">
-                <h2>🎵 Кодирование звука</h2>
-                <p><strong>АЦП (аналогово-цифровой преобразователь)</strong> — частота дискретизации (Гц) и разрядность квантования.</p>
-                <p>Формула объёма звукового файла: <strong>V = частота × разрядность × время × количество каналов</strong></p>
-                <div class="code-block">
-                    <pre># Пример для стерео (2 канала), 44.1 кГц, 16 бит, 60 секунд
+            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #000000; margin-top: 0;">🎵 Кодирование звука</h2>
+                <p style="color: #000000;"><strong style="color: #000000;">АЦП (аналогово-цифровой преобразователь)</strong> — частота дискретизации (Гц) и разрядность квантования.</p>
+                <p style="color: #000000;">Формула объёма звукового файла: <strong style="color: #000000;">V = частота × разрядность × время × количество каналов</strong></p>
+                <div style="background: #2d2d2d; padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
+                    <pre style="color: #f8f8f2; margin: 0;"># Пример для стерео (2 канала), 44.1 кГц, 16 бит, 60 секунд
 частота = 44100
 разрядность = 16  # бит
 время_сек = 60
@@ -140,11 +104,11 @@ print(f"Размер: {объём_Мбайт:.1f} МБ")  # ~10.1 МБ</pre>
                 </div>
             </div>
 
-            <div class="topic-card">
-                <h2>🔐 Кодирование для передачи данных</h2>
-                <p><strong>Base64</strong> — преобразование двоичных данных в текст (ASCII). Используется в email, URL, API.</p>
-                <div class="code-block">
-                    <pre># Python: кодирование в Base64
+            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #000000; margin-top: 0;">🔐 Кодирование для передачи данных</h2>
+                <p style="color: #000000;"><strong style="color: #000000;">Base64</strong> — преобразование двоичных данных в текст (ASCII). Используется в email, URL, API.</p>
+                <div style="background: #2d2d2d; padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
+                    <pre style="color: #f8f8f2; margin: 0;"># Python: кодирование в Base64
 import base64
 text = "Hello, мир!"
 encoded = base64.b64encode(text.encode('utf-8'))
