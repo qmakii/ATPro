@@ -6,71 +6,6 @@
     <title>Электронные таблицы | ATPro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        
-        .topic-content > h1 {
-            color: #ffffff !important;
-        }
-        
-        .topic-card { 
-            background: #ffffff !important; 
-            border-radius: 12px; 
-            padding: 1.5rem; 
-            margin-bottom: 1.5rem; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-        }
-        .topic-card * {
-            color: #000000 !important;
-        }
-        .topic-card a {
-            color: #8b1e3f !important;
-        }
-        
-        .code-block { 
-            background: #2d2d2d !important; 
-            padding: 1rem; 
-            border-radius: 8px; 
-            overflow-x: auto; 
-            font-family: 'Courier New', monospace; 
-        }
-        .code-block * {
-            color: #f8f8f2 !important;
-        }
-        
-        .formula-box { 
-            background: #e8f4f8 !important; 
-            padding: 1rem; 
-            border-left: 4px solid #2980b9; 
-            font-family: monospace; 
-            margin: 1rem 0;
-        }
-        .formula-box * {
-            color: #000000 !important;
-        }
-        
-        .encoding-table, .sheet-table, .data-table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin: 1rem 0; 
-        }
-        .encoding-table th, .sheet-table th, .data-table th { 
-            border: 1px solid #ddd; 
-            padding: 8px; 
-            text-align: left; 
-            background: #2c3e50; 
-            color: white !important; 
-        }
-        .encoding-table td, .sheet-table td, .data-table td { 
-            border: 1px solid #ddd; 
-            padding: 8px; 
-            color: #000000 !important; 
-        }
-        .sheet-table th, .sheet-table td { text-align: center; }
-        
-        .graph-visual { color: #000000 !important; }
-        caption { color: #000000 !important; }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -98,59 +33,29 @@
         </nav>
     </header>
 
-    <main>
-        <div class="topic-content">
-            <h1>Электронные таблицы (Excel / Google Sheets)</h1>
+    <main style="padding-top: 3rem;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+            <h1 style="color: #ffffff;">Электронные таблицы (Excel / Google Sheets)</h1>
             
-            <div class="topic-card">
-                <h2>📈 Основы работы</h2>
-                <p>Электронная таблица состоит из <strong>ячеек</strong>, расположенных на пересечении строк и столбцов. Адрес ячейки: буква столбца + номер строки (например, <strong>B4</strong>).</p>
-                <table class="sheet-table">
-                    <thead><tr><th></th><th>A</th><th>B</th><th>C</th></tr></thead>
+            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #000000; margin-top: 0;">📈 Основы работы</h2>
+                <p style="color: #000000;">Электронная таблица состоит из <strong style="color: #000000;">ячеек</strong>, расположенных на пересечении строк и столбцов. Адрес ячейки: буква столбца + номер строки (например, <strong style="color: #000000;">B4</strong>).</p>
+                <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; background: #2c3e50; color: #ffffff;"></th>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; background: #2c3e50; color: #ffffff;">A</th>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; background: #2c3e50; color: #ffffff;">B</th>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; background: #2c3e50; color: #ffffff;">C</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><th>1</th><td>Товар</td><td>Цена</td><td>Количество</td></tr>
-                        <tr><th>2</th><td>Ноутбук</td><td>50000</td><td>5</td></tr>
-                        <tr><th>3</th><td>Мышь</td><td>1500</td><td>20</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="topic-card">
-                <h2>🧮 Формулы и функции</h2>
-                <p>Формула всегда начинается со знака <strong>=</strong>. Основные функции:</p>
-                <ul>
-                    <li><strong>=СУММ(A1:A10)</strong> — сумма чисел в диапазоне</li>
-                    <li><strong>=СРЗНАЧ(B1:B5)</strong> — среднее арифметическое</li>
-                    <li><strong>=ЕСЛИ(A1>10; "Да"; "Нет")</strong> — условный оператор</li>
-                    <li><strong>=ВПР(E1; A1:B10; 2; ЛОЖЬ)</strong> — вертикальный просмотр</li>
-                </ul>
-                <div class="formula-box">
-                    <strong>Пример:</strong> =B2*C2 → вычисляет стоимость (цена × количество)
-                </div>
-            </div>
-
-            <div class="topic-card">
-                <h2>📊 Абсолютные и относительные ссылки</h2>
-                <p><strong>Относительная (A1):</strong> изменяется при копировании формулы.</p>
-                <p><strong>Абсолютная ($A$1):</strong> фиксирует столбец и строку (не меняется).</p>
-                <p><strong>Смешанная ($A1 или A$1):</strong> фиксирует только столбец или только строку.</p>
-                <div class="code-block">
-                    <pre>// Пример использования абсолютной ссылки для налоговой ставки
-= B2 * $E$1  // где в E1 хранится ставка НДС (например, 0.20)</pre>
-                </div>
-            </div>
-
-            <div class="topic-card">
-                <h2>📉 Диаграммы и сводные таблицы</h2>
-                <p><strong>Сводная таблица</strong> — мощный инструмент для агрегации и анализа больших объёмов данных (группировка, сумма, среднее).</p>
-                <p><strong>Диаграммы:</strong> гистограммы, круговые, линейчатые — для визуализации трендов и сравнений.</p>
-                <div class="formula-box">
-                    Совет: Используйте <strong>Условное форматирование</strong> для автоматической подсветки ячеек по правилам (например, все продажи >1000 зелёным цветом).
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer><p>&copy; 2026 ATPro. Учебный портал по информатике.</p></footer>
-</body>
-</html>
+                        <tr>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; color: #000000;">1</th>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; color: #000000;">Товар</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; color: #000000;">Цена</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; color: #000000;">Количество</td>
+                        </tr>
+                        <tr>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; color: #000000;">2</th>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; text-align: center; color:
