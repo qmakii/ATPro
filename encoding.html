@@ -6,51 +6,184 @@
     <title>Кодирование информации | ATPro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
-   <style>
-    .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-    .topic-card { background: #ffffff; color: #000000; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .topic-card h1,
-    .topic-card h2,
-    .topic-card h3,
-    .topic-card h4,
-    .topic-card p,
-    .topic-card li,
-    .topic-card td,
-    .topic-card strong,
-    .topic-card span,
-    .topic-card div,
-    .topic-card ul {
-        color: #000000;
-    }
-    .topic-card a {
-        color: #8b1e3f;
-    }
-    .code-block { background: #2d2d2d; color: #f8f8f2; padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; }
-    .code-block,
-    .code-block pre,
-    .code-block * {
-        color: #f8f8f2;
-    }
-    .encoding-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    .encoding-table th, .encoding-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    .encoding-table th { background: var(--primary, #2c3e50); color: white; }
-    .encoding-table td { color: #000000; }
-    .sheet-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    .sheet-table th, .sheet-table td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-    .sheet-table th { background: var(--primary, #2c3e50); color: white; }
-    .sheet-table td { color: #000000; }
-    .data-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    .data-table th, .data-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    .data-table th { background: var(--primary, #2c3e50); color: white; }
-    .data-table td { color: #000000; }
-    .graph-visual { color: #000000; }
-    .formula-box { color: #000000; }
+    <style>
+        .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        
+        /* Текст ВНЕ карточек — красный (бордовый из гаммы) */
+        .topic-content > h1,
+        .topic-content > p,
+        .topic-content > h2,
+        .topic-content > h3,
+        .topic-content > h4,
+        .topic-content > span,
+        .topic-content > div:not(.topic-card):not(.code-block) {
+            color: #8b1e3f;
+        }
+        
+        /* Карточки — белый фон, чёрный текст */
+        .topic-card { 
+            background: #ffffff; 
+            color: #000000; 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+        }
+        .topic-card h1,
+        .topic-card h2,
+        .topic-card h3,
+        .topic-card h4,
+        .topic-card p,
+        .topic-card li,
+        .topic-card td,
+        .topic-card th,
+        .topic-card strong,
+        .topic-card span,
+        .topic-card div,
+        .topic-card ul {
+            color: #000000;
+        }
+        
+        /* Ссылки в карточках — красный */
+        .topic-card a {
+            color: #8b1e3f;
+        }
+        
+        /* Блоки кода */
+        .code-block { 
+            background: #2d2d2d; 
+            color: #f8f8f2; 
+            padding: 1rem; 
+            border-radius: 8px; 
+            overflow-x: auto; 
+            font-family: 'Courier New', monospace; 
+        }
+        .code-block,
+        .code-block pre,
+        .code-block * {
+            color: #f8f8f2;
+        }
+        
+        /* Таблицы */
+        .encoding-table, .sheet-table, .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 1rem 0; 
+        }
+        .encoding-table th, .sheet-table th, .data-table th { 
+            border: 1px solid #ddd; 
+            padding: 8px; 
+            text-align: left; 
+            background: var(--primary, #2c3e50); 
+            color: white; 
+        }
+        .encoding-table td, .sheet-table td, .data-table td { 
+            border: 1px solid #ddd; 
+            padding: 8px; 
+            color: #000000; 
+        }
+        .sheet-table th, .sheet-table td { text-align: center; }
+        
+        /* Доп. элементы */
+        .graph-visual { color: #000000; }
+        .formula-box { color: #000000; }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="logo">
             <a href="index.html">
+                <h1>AT<span>Pro</span></h1>
+                <p class="logo-sub">УПРАВЛЕНИЕ ПЕРЕВОЗКАМИ</p>
+            </a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Виды услуг</a></li>
+                <li><a href="documents.html">Документы</a></li>
+                <li><a href="tips.html">Советы</a></li>
+                <li><a href="algorithms.html">Алгоритмы</a></li>
+                <li><a href="it-systems.html">Системы счисления</a></li>
+                <li><a href="encoding.html" class="active">Кодирование</a></li>
+                <li><a href="graphs.html">Графы</a></li>
+                <li><a href="databases.html">Базы данных</a></li>
+                <li><a href="spreadsheets.html">Эл. таблицы</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <button class="btn-nav" onclick="window.location.href='contact.html'">Связаться</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="topic-content">
+            <h1>Кодирование информации</h1>
+            
+            <div class="topic-card">
+                <h2>📝 Текстовое кодирование</h2>
+                <p><strong>ASCII</strong> — 7-битная кодировка (0-127), содержит латиницу, цифры, знаки препинания.</p>
+                <p><strong>Unicode (UTF-8, UTF-16)</strong> — поддерживает символы всех языков мира, эмодзи.</p>
+                <table class="encoding-table">
+                    <thead><tr><th>Символ</th><th>ASCII (дес.)</th><th>ASCII (двоич.)</th><th>UTF-8 (hex)</th></tr></thead>
+                    <tbody>
+                        <tr><td>A</td><td>65</td><td>01000001</td><td>41</td></tr>
+                        <tr><td>Я</td><td>-</td><td>-</td><td>D0 AF</td></tr>
+                        <tr><td>$</td><td>36</td><td>00100100</td><td>24</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="topic-card">
+                <h2>🖼️ Кодирование изображений</h2>
+                <p><strong>Растровая графика:</strong> изображение состоит из пикселей. Каждый пиксель кодируется цветом (RGB, CMYK).</p>
+                <p>Формула объёма: <strong>V = ширина × высота × глубина цвета</strong> (бит на пиксель)</p>
+                <div class="code-block">
+                    <pre>// Пример расчёта размера изображения
+ширина = 1920
+высота = 1080
+глубина_цвета = 24  # бит (True Color)
+объём_бит = 1920 * 1080 * 24
+объём_Мбайт = объём_бит / 8 / 1024 / 1024
+print(f"Размер: {объём_Мбайт:.2f} МБ")  # ~5.93 МБ</pre>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <h2>🎵 Кодирование звука</h2>
+                <p><strong>АЦП (аналогово-цифровой преобразователь)</strong> — частота дискретизации (Гц) и разрядность квантования.</p>
+                <p>Формула объёма звукового файла: <strong>V = частота × разрядность × время × количество каналов</strong></p>
+                <div class="code-block">
+                    <pre># Пример для стерео (2 канала), 44.1 кГц, 16 бит, 60 секунд
+частота = 44100
+разрядность = 16  # бит
+время_сек = 60
+каналы = 2
+объём_бит = частота * разрядность * время_сек * каналы
+объём_Мбайт = объём_бит / 8 / 1024 / 1024
+print(f"Размер: {объём_Мбайт:.1f} МБ")  # ~10.1 МБ</pre>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <h2>🔐 Кодирование для передачи данных</h2>
+                <p><strong>Base64</strong> — преобразование двоичных данных в текст (ASCII). Используется в email, URL, API.</p>
+                <div class="code-block">
+                    <pre># Python: кодирование в Base64
+import base64
+text = "Hello, мир!"
+encoded = base64.b64encode(text.encode('utf-8'))
+print(encoded)  # b'SGVsbG8sINC80LjRgCE='
+
+decoded = base64.b64decode(encoded).decode('utf-8')
+print(decoded)  # Hello, мир!</pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2026 ATPro. Учебный портал по информатике.</p></footer>
+</body>
+</html>
                 <h1>AT<span>Pro</span></h1>
                 <p class="logo-sub">УПРАВЛЕНИЕ ПЕРЕВОЗКАМИ</p>
             </a>
