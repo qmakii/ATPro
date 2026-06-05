@@ -506,6 +506,25 @@ footer {
   color: #7a7a8a;
 }
 
+/* ========== БЛОКИ КОДА (общие) ========== */
+.code-block {
+  background: #0a0a0f;
+  border-left: 4px solid #8b1e3f;
+  padding: 16px 20px;
+  border-radius: 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.code-block pre {
+  margin: 0;
+  color: #d4d4dc;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 /* ========== АДАПТИВ ========== */
 @media (max-width: 768px) {
   .header {
@@ -574,110 +593,4 @@ footer {
   font-weight: 500;
   display: inline-block;
   color: #e0dfe8;
-}
-
-.code-block {
-  background: #0a0a0f;
-  border-left: 4px solid #8b1e3f;
-  padding: 16px 20px;
-  border-radius: 16px;
-  font-family: 'Courier New', monospace;
-  font-size: 14px;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
-.code-block pre {
-  margin: 0;
-  color: #d4d4dc;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-/* ========== ЧЁРНЫЙ ТЕКСТ ДЛЯ ТЕМАТИЧЕСКИХ СТРАНИЦ ========== */
-.topic-content {
-  color: #000000;
-}
-
-.topic-content h1 {
-  color: #000000;
-  border-left: 4px solid #8b1e3f;
-}
-
-.topic-content h2 {
-  color: #1a1a2e;
-}
-
-.topic-content h3 {
-  color: #000000;
-}
-
-.topic-content p {
-  color: #000000;
-}
-
-.topic-content li {
-  color: #000000;
-}
-
-.topic-content td {
-  color: #000000;
-}
-
-/* Заголовки таблиц остаются с белым текстом */
-.sheet-table th,
-.encoding-table th,
-.data-table th {
-  color: white;
-}
-
-/* Блоки кода остаются со светлым текстом */
-.code-block,
-.code-block pre {
-  color: #f8f8f2;
-}
-
-/* Карточки на тематических страницах */
-.topic-card,
-.topic-card * {
-  color: #000000 !important;
-}
-
-.topic-card {
-  background: #ffffff;
-}
-.topic-card h1,
-.topic-card h2,
-.topic-card h3,
-.topic-card h4,
-.topic-card p,
-.topic-card li,
-.topic-card td,
-.topic-card strong {
-    color: #000000;
-}
-
-.code-block,
-.code-block pre {
-    color: #f8f8f2;
-}
-
-/* Ссылки оставляем красными */
-.topic-card a {
-  color: #8b1e3f !important;
-}
-
-/* Блоки кода внутри карточек не трогаем */
-.topic-card .code-block,
-.topic-card .code-block pre,
-.topic-card .code-block * {
-  color: #f8f8f2 !important;
-}
-
-/* ========== АДАПТИВ ДЛЯ НАВИГАЦИИ ========== */
-@media (max-width: 768px) {
-  .nav a[href="it-systems.html"],
-  .nav a[href="algorithms.html"] {
-    font-size: 12px;
-  }
 }
