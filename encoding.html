@@ -77,8 +77,8 @@
                 <h2 style="color: #000000; margin-top: 0;">🖼️ Кодирование изображений</h2>
                 <p style="color: #000000;"><strong style="color: #000000;">Растровая графика:</strong> изображение состоит из пикселей. Каждый пиксель кодируется цветом (RGB, CMYK).</p>
                 <p style="color: #000000;">Формула объёма: <strong style="color: #000000;">V = ширина × высота × глубина цвета</strong> (бит на пиксель)</p>
-                <div style="background: #2d2d2d; padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
-                    <pre style="color: #f8f8f2; margin: 0;">// Пример расчёта размера изображения
+                <div style="background: #0a0a0f; border-left: 3px solid #8b1e3f; padding: 16px 16px 16px 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
+                    <pre style="color: #b0b0c0; margin: 0;">// Пример расчёта размера изображения
 ширина = 1920
 высота = 1080
 глубина_цвета = 24  # бит (True Color)
@@ -92,8 +92,8 @@ print(f"Размер: {объём_Мбайт:.2f} МБ")  # ~5.93 МБ</pre>
                 <h2 style="color: #000000; margin-top: 0;">🎵 Кодирование звука</h2>
                 <p style="color: #000000;"><strong style="color: #000000;">АЦП (аналогово-цифровой преобразователь)</strong> — частота дискретизации (Гц) и разрядность квантования.</p>
                 <p style="color: #000000;">Формула объёма звукового файла: <strong style="color: #000000;">V = частота × разрядность × время × количество каналов</strong></p>
-                <div style="background: #2d2d2d; padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
-                    <pre style="color: #f8f8f2; margin: 0;"># Пример для стерео (2 канала), 44.1 кГц, 16 бит, 60 секунд
+                <div style="background: #0a0a0f; border-left: 3px solid #8b1e3f; padding: 16px 16px 16px 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
+                    <pre style="color: #b0b0c0; margin: 0;"># Пример для стерео (2 канала), 44.1 кГц, 16 бит, 60 секунд
 частота = 44100
 разрядность = 16  # бит
 время_сек = 60
@@ -107,8 +107,8 @@ print(f"Размер: {объём_Мбайт:.1f} МБ")  # ~10.1 МБ</pre>
             <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <h2 style="color: #000000; margin-top: 0;">🔐 Кодирование для передачи данных</h2>
                 <p style="color: #000000;"><strong style="color: #000000;">Base64</strong> — преобразование двоичных данных в текст (ASCII). Используется в email, URL, API.</p>
-                <div style="background: #2d2d2d; padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
-                    <pre style="color: #f8f8f2; margin: 0;"># Python: кодирование в Base64
+                <div style="background: #0a0a0f; border-left: 3px solid #8b1e3f; padding: 16px 16px 16px 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
+                    <pre style="color: #b0b0c0; margin: 0;"># Python: кодирование в Base64
 import base64
 text = "Hello, мир!"
 encoded = base64.b64encode(text.encode('utf-8'))
