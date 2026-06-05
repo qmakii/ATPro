@@ -6,60 +6,6 @@
     <title>Базы данных | ATPro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .topic-content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        
-        .topic-content > h1 {
-            color: #ffffff !important;
-        }
-        
-        .topic-card { 
-            background: #ffffff !important; 
-            border-radius: 12px; 
-            padding: 1.5rem; 
-            margin-bottom: 1.5rem; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-        }
-        .topic-card * {
-            color: #000000 !important;
-        }
-        .topic-card a {
-            color: #8b1e3f !important;
-        }
-        
-        .code-block { 
-            background: #2d2d2d !important; 
-            padding: 1rem; 
-            border-radius: 8px; 
-            overflow-x: auto; 
-            font-family: 'Courier New', monospace; 
-        }
-        .code-block * {
-            color: #f8f8f2 !important;
-        }
-        
-        .encoding-table, .sheet-table, .data-table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin: 1rem 0; 
-        }
-        .encoding-table th, .sheet-table th, .data-table th { 
-            border: 1px solid #ddd; 
-            padding: 8px; 
-            text-align: left; 
-            background: #2c3e50; 
-            color: white !important; 
-        }
-        .encoding-table td, .sheet-table td, .data-table td { 
-            border: 1px solid #ddd; 
-            padding: 8px; 
-            color: #000000 !important; 
-        }
-        .sheet-table th, .sheet-table td { text-align: center; }
-        
-        .graph-visual, .formula-box { color: #000000 !important; }
-        caption { color: #000000 !important; }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -88,27 +34,43 @@
     </header>
 
     <main>
-        <div class="topic-content">
-            <h1>Базы данных (SQL и NoSQL)</h1>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+            <h1 style="color: #ffffff;">Базы данных (SQL и NoSQL)</h1>
             
-            <div class="topic-card">
-                <h2>📊 Что такое база данных?</h2>
-                <p>База данных (БД) — организованная структура для хранения, управления и извлечения данных. <strong>СУБД</strong> — система управления базами данных (MySQL, PostgreSQL, SQLite, MongoDB).</p>
+            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #000000; margin-top: 0;">📊 Что такое база данных?</h2>
+                <p style="color: #000000;">База данных (БД) — организованная структура для хранения, управления и извлечения данных. <strong style="color: #000000;">СУБД</strong> — система управления базами данных (MySQL, PostgreSQL, SQLite, MongoDB).</p>
             </div>
 
-            <div class="topic-card">
-                <h2>🗄️ Реляционные БД (SQL)</h2>
-                <p>Данные хранятся в таблицах, связанных ключами. <strong>Первичный ключ</strong> — уникальный идентификатор записи. <strong>Внешний ключ</strong> — ссылается на первичный ключ другой таблицы.</p>
-                <table class="data-table">
-                    <caption>Таблица "Студенты"</caption>
-                    <thead><tr><th>id (PK)</th><th>имя</th><th>курс</th></tr></thead>
+            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #000000; margin-top: 0;">🗄️ Реляционные БД (SQL)</h2>
+                <p style="color: #000000;">Данные хранятся в таблицах, связанных ключами. <strong style="color: #000000;">Первичный ключ</strong> — уникальный идентификатор записи. <strong style="color: #000000;">Внешний ключ</strong> — ссылается на первичный ключ другой таблицы.</p>
+                
+                <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+                    <caption style="color: #000000; margin-bottom: 0.5rem; text-align: left;">Таблица "Студенты"</caption>
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: left; background: #2c3e50; color: #ffffff;">id (PK)</th>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: left; background: #2c3e50; color: #ffffff;">имя</th>
+                            <th style="border: 1px solid #ddd; padding: 10px 12px; text-align: left; background: #2c3e50; color: #ffffff;">курс</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>1</td><td>Анна</td><td>3</td></tr>
-                        <tr><td>2</td><td>Борис</td><td>2</td></tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">1</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">Анна</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">3</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">2</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">Борис</td>
+                            <td style="border: 1px solid #ddd; padding: 10px 12px; color: #000000;">2</td>
+                        </tr>
                     </tbody>
                 </table>
-                <div class="code-block">
-                    <pre>-- Создание таблицы
+                
+                <div style="background: #2d2d2d; padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1.5rem;">
+                    <pre style="color: #f8f8f2; margin: 0;">-- Создание таблицы
 CREATE TABLE students (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
@@ -126,11 +88,11 @@ WHERE g.subject = 'Математика';</pre>
                 </div>
             </div>
 
-            <div class="topic-card">
-                <h2>📁 Нереляционные БД (NoSQL)</h2>
-                <p>Для больших объёмов неструктурированных данных: MongoDB (документы), Redis (ключ-значение), Neo4j (графы).</p>
-                <div class="code-block">
-                    <pre>// Документ MongoDB
+            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #000000; margin-top: 0;">📁 Нереляционные БД (NoSQL)</h2>
+                <p style="color: #000000;">Для больших объёмов неструктурированных данных: MongoDB (документы), Redis (ключ-значение), Neo4j (графы).</p>
+                <div style="background: #2d2d2d; padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; margin-top: 1rem;">
+                    <pre style="color: #f8f8f2; margin: 0;">// Документ MongoDB
 {
   "_id": ObjectId("507f1f77bcf86cd799439011"),
   "username": "ivan_petrov",
@@ -144,13 +106,13 @@ WHERE g.subject = 'Математика';</pre>
                 </div>
             </div>
 
-            <div class="topic-card">
-                <h2>🔗 Нормализация</h2>
-                <p>Устранение избыточности и аномалий:</p>
-                <ul>
-                    <li><strong>1НФ:</strong> атомарные значения, нет повторяющихся групп</li>
-                    <li><strong>2НФ:</strong> полная зависимость от первичного ключа</li>
-                    <li><strong>3НФ:</strong> отсутствие транзитивных зависимостей</li>
+            <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #000000; margin-top: 0;">🔗 Нормализация</h2>
+                <p style="color: #000000;">Устранение избыточности и аномалий:</p>
+                <ul style="color: #000000; padding-left: 1.5rem;">
+                    <li style="color: #000000; margin-bottom: 0.5rem;"><strong style="color: #000000;">1НФ:</strong> атомарные значения, нет повторяющихся групп</li>
+                    <li style="color: #000000; margin-bottom: 0.5rem;"><strong style="color: #000000;">2НФ:</strong> полная зависимость от первичного ключа</li>
+                    <li style="color: #000000; margin-bottom: 0.5rem;"><strong style="color: #000000;">3НФ:</strong> отсутствие транзитивных зависимостей</li>
                 </ul>
             </div>
         </div>
